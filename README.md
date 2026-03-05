@@ -1,4 +1,4 @@
-# Smartgrid_as_a_service
+# Smartgrid as a service
 My research project in collaboration with the cybersecurity Viman Lab.
 
 Mentor: Harshavardhan Chintapatla
