@@ -1,5 +1,5 @@
 # Smartgrid as a service
-My research project in collaboration with the cybersecurity Viman Lab.
+My research project in collaboration with the cybersecurity Viman Lab. I was in charge of engineering the ONOS and Mininet setup to emulate the smart power grid structures virtually
 
 Mentor: Harshavardhan Chintapatla
 
