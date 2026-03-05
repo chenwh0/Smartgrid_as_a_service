@@ -1,0 +1,30 @@
+[
+  {
+    "alert_id": "001",
+    "attacker": "10.0.0.3 (Outstation 3)",
+    "victim": "10.0.0.11 (Outstation 11)",
+    "function_code": "18 (Stop Application)",
+    "timestamp": "2025-11-18T23:33:20.869272+00:00",
+    "severity": "critical",
+    "packet_trace": "Grouped DNP3 lateral movement attack.\nAttacker 10.0.0.3 (station 3) sent FC 18 (Stop Application) to victim 10.0.0.11 (station 11) on port 20011.\nVictim replied with 5 unsolicited responses (FC 130) from source ports 43026/43036.\nExplanation: Lateral movement attack: Outstation 3 sent Stop Application command to outstation 11. Victim responded with 5 unsolicited response(s). Average response time: -1 ms. Part of ongoing attack campaign (4 commands sent).",
+    "llm_reasoning": "This attack requires immediate attention due to its critical nature and potential for significant economic losses and safety risks. Blocking the attacker's IP address immediately will prevent further disruption of industrial processes, while also allowing for a thorough investigation into the attack campaign.",
+    "mitigation_action": "LLM classified the grouped lateral movement as a CRITICAL threat and recommended IMMEDIATE_BLOCK. Generated a COMPLETE_IP_BLOCK policy on switch of:0000000000000001 and deployed it via the ONOS controller at 52.90.84.6:8181 (appId=org.onosproject.llm), blocking traffic from attacker 10.0.0.3.",
+    "rule_based_action": "First-level fallback mitigation installed a temporary flow rule via ONOS (appId=org.onosproject.fallback) on of:0000000000000001 to block the observed attack path for alert #001 before LLM confirmation.",
+    "llm_verification": "LLM confirmed the rule-based assessment, upgraded it to a complete IP block, and removed the earlier fallback flow (flow ID 50665498356023196) once the LLM policy was deployed.",
+    "current_status": "mitigated"
+  },
+  {
+    "alert_id": "002",
+    "attacker": "10.0.0.4 (Outstation 4)",
+    "victim": "10.0.0.12 (Outstation 12)",
+    "function_code": "18 (Stop Application)",
+    "timestamp": "2025-11-18T23:52:18.271666+00:00",
+    "severity": "critical",
+    "packet_trace": "Grouped DNP3 lateral movement attack.\nAttacker 10.0.0.4 (station 4) sent FC 18 (Stop Application) to victim 10.0.0.12 (station 12) on port 20012.\nVictim replied with 7 unsolicited responses (FC 130) from source ports 48700/48704.\nExplanation: Lateral movement attack: Outstation 4 sent Stop Application command to outstation 12. Victim responded with 7 unsolicited response(s). Average response time: -2 ms. Part of ongoing attack campaign (6 commands sent).",
+    "llm_reasoning": "This attack is a high-priority threat due to its potential for causing significant downtime and safety risks. The use of critical DNP3 commands, combined with the attacker's ability to execute them successfully across switches, warrants an immediate block on all suspicious traffic.",
+    "mitigation_action": "LLM classified the threat as CRITICAL and recommended IMMEDIATE_BLOCK. Generated a COMPLETE_IP_BLOCK policy on switch of:0000000000000002 and deployed it via the ONOS controller at 52.90.84.6:8181 (appId=org.onosproject.llm), blocking traffic from attacker 10.0.0.4.",
+    "rule_based_action": "First-level fallback mitigation installed a temporary flow rule via ONOS (appId=org.onosproject.fallback) on of:0000000000000002 to protect outstation 12 while waiting for LLM analysis.",
+    "llm_verification": "LLM confirmed the fallback decision, replaced it with the final LLM flow, and deleted the previous fallback rule (flow ID 50665496683673117) once the new policy was active.",
+    "current_status": "mitigated"
+  }
+]
