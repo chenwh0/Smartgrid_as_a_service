@@ -1,9 +1,9 @@
 # Smartgrid as a service
 My cloud computing and cybersecurity research project in collaboration with the Viman Lab. 
 
-I was in charge of engineering the ONOS and Mininet setup to emulate the smart power grid structures virtually. 
+   🛠️ I was in charge of engineering the ONOS and Mininet setup to emulate the smart power grid structures virtually. 
 
-My contributions to the project report includes *Abstract*, *Problem definition*, *Testbed construction*, and creation of *Core Logic* diagram. 
+I authored the sections in *Abstract*, *Problem definition*, *Testbed construction*, and creation of *Core Logic* diagram. 
 [<img width="1750" height="1412" alt="image" src="https://github.com/user-attachments/assets/c0077eb6-831e-4507-be6d-fe41719b2caf" />](https://github.com/chenwh0/Smartgrid_as_a_service/blob/main/Final%20project%20report.pdf)
 
 
